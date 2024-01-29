@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="color: aqua;">Joyful Bliss</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: OCR A Std, monospace;
+            background-color: #f8f8f8;
+            overflow: hidden;
+        }
+    
+        #poetry-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #333;
+            
+        }
+    
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: rgb(193, 216, 60);
+        }
+    
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .sunlight {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle, transparent 20%, #fb633f 50%, transparent 100%);
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+            animation: sunlightanimation 10s infinite linear;
+            filter: blur(40px);
+        }
+
+        @keyframes sunlightanimation {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+            
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(3);
+            }
+        }
+
+
+        .special-text {
+            animation: textanim 5s infinite alternate;
+        }
+
+        @keyframes textanim {
+            0% {
+                color: black;
+            }
+            100% {
+                color: yellow;
+            }
+        }
+
+        .special-text2 {
+            animation: textanim 8s infinite alternate;
+        }
+
+        @keyframes textanim {
+            0% {
+                color: black; font-size: smaller;
+            }
+            100% {
+                color: rgb(202, 130, 202); font-size: larger;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="sunlight"></div>
+
+    <div id="poetry-box">
+        <h1>Joyful Bliss</h1>
+        <p>
+        Sunlight dances on petals so <span class="special-text">bright</span>,<br>
+        A symphony of laughter in the golden light.<br>
+        <span class="special-text2">Butterflies waltz</span> with the gentle breeze,<br>
+        Pure joy painted in hues of ecstasies.<br>
+        <br>
+        <span class="special-text"> Radiant warmth</span> in a sky of blue,<br>
+        Nature's embrace in every view.<br>
+        Hearts aglow with a cheerful song,<br>
+        <span class="special-text2">In this world where joy belongs</span>.
+        </p>
+    </div>
+</body>
+</html>
+
+
