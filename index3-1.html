@@ -7,12 +7,11 @@
 
     <style>
         body {
-            margin: 0;  
+            margin: 0;
             padding: 0;
             font-family: 'Apple Chancery', cursive;
             background-color: pink;
-            overflow: hidden; 
-            background-image: url("pretty.gif");
+            overflow: hidden;
             background-repeat: no-repeat;
             height: 100%;
             background-position: center;
@@ -20,19 +19,18 @@
             word-spacing: 1rem;
             overflow-y: scroll;
             scroll-behavior: smooth;
-     
+            position: relative;
         }
 
         #poetry-box {
             display: flex;
-            flex-direction: column; 
+            flex-direction: column;
             align-items: center;
-            justify-content: center; 
-            height: 100vh; 
+            justify-content: center;
+            height: 100vh;
             min-height: 100vh;
             color: rgb(255, 255, 255);
-            position: relative; 
-           
+            position: relative;
         }
 
         h1 {
@@ -45,14 +43,20 @@
             text-align: center;
         }
 
-        .heartbeat { 
+        .heartbeat {
             color: rgb(250, 21, 71);
             animation: beat 1s infinite alternate;
             transform-origin: center;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            transition: font-size 0.5s ease;
         }
-        @keyframes beat{
+
+        @keyframes beat {
             to { transform: scale(1.25); }
         }
+
         .test {
             display: inline-block;
         }
@@ -63,52 +67,52 @@
             font-weight: bold;
         }
 
-        /* .flex-container {
-            display: flex; 
-            justify-content: space-around; 
-            align-items: center;
-            width: 100%; 
-            padding: 20px; 
+        .heart-background {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: conic-gradient(from 0deg at 50% 50%, #ff6b6b 0deg, #ffb6b9 120deg, #ff6b6b 240deg);
+            border-radius: 50%;
+            animation: colorChange 5s infinite alternate;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
         }
 
-        .flex-item {
-            flex: 1; 
-            text-align: center; 
-            margin: 10px; 
-        } */
+        @keyframes colorChange {
+            0% {
+                filter: brightness(0.7);
+            }
+            100% {
+                filter: brightness(1);
+            }
+        }
 
+        .heartbeat:hover {
+            font-size: 4rem;
+        }
     </style>
 </head>
 <body>
 
-<div id="poetry-box"> 
+<div id="poetry-box">
+    <div class="heart-background"></div>
     <h1>Passion's Fire</h1>
     <div class="peotry-content">
-        <div class="heartbeat test">Roses bloom</div> in shades of red,<br>
+        <span class="heartbeat test">Roses bloom</span> in shades of red,<br>
         Love's tapestry by passion spread.<br>
-        Heartbeats echo in a  <div class="heartbeat test">tender rhyme,</div><br>
+        Heartbeats echo in a <span class="heartbeat test">tender rhyme,</span><br>
         Love's embrace frozen in the sands of time.<br>
         <br>
-       <div class="heartbeat test"> Moonlit whispers</div> and stolen glances,<br>
+        <span class="heartbeat test">Moonlit whispers</span> and stolen glances,<br>
         Romance spun in fleeting chances.<br>
-        A canvas painted in <div class="heartbeat test">love's desire,</div><br>
+        A canvas painted in <span class="heartbeat test">love's desire,</span><br>
         Igniting a passionate, eternal fire.
     </div>
 
     <div class="heartbeat">&hearts;</div>
-
-    <!-- <div class="flex-container">
-        <div class="flex-item">
-
-        </div>
-        <div class="flex-item"> 
-
-        </div>
-        <div class="flex-item">
-
-        </div>
-    </div> -->
 </div>
-    
+
 </body>
 </html>
